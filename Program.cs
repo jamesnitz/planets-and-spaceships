@@ -45,10 +45,31 @@ namespace planet_and_spaceships {
             wordsAndDefinitions.Add ("SlickIce1", "When you're definitely it");
             wordsAndDefinitions.Add ("Ice", "The moment at which one gets an ice");
             //explain this []
-            Console.WriteLine (wordsAndDefinitions["Awesome"]);
-            Console.WriteLine (wordsAndDefinitions["Ice"]);
+            // Console.WriteLine (wordsAndDefinitions["Awesome"]);
+            // Console.WriteLine (wordsAndDefinitions["Ice"]);
             foreach (KeyValuePair<string, string> word in wordsAndDefinitions) {
-                Console.WriteLine ($"The definition of {word.Key} is : {word.Value}");
+                // 
+            }
+
+            //Dictionary exercise 2
+            List<Dictionary<string, string>> dictionaryOfWords = new List<Dictionary<string, string>> ();
+            Dictionary<string, string> excitement = new Dictionary<string, string> () { { "word", "excitement" }, { "definition", "jubilation" }, { "part of speech", "adj." }, { "example", "Nascar got dat excitement" }
+            };
+
+            Dictionary<string, string> candy = new Dictionary<string, string> () { { "word", "candy" }, { "definition", "pow pow" }, { "part of speech", "noun." }, { "example", "Kroger got candy" }
+            };
+
+            Dictionary<string, string> juice = new Dictionary<string, string> () { { "word", "juice" }, { "definition", "delish liquid" }, { "part of speech", "noun." }, { "example", "love me some juice" }
+            };
+
+            dictionaryOfWords.Add (excitement);
+            dictionaryOfWords.Add (candy);
+            dictionaryOfWords.Add (juice);
+
+            foreach (Dictionary<string, string> word in dictionaryOfWords) {
+                foreach (KeyValuePair<string, string> entry in word) {
+                    Console.WriteLine ($"{entry.Key}, {entry.Value}");
+                }
             }
 
         }
