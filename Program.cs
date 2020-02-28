@@ -13,13 +13,13 @@ namespace planet_and_spaceships {
             List<string> rockyPlanets = planetList.GetRange (0, 4);
             planetList.Remove ("Pluto");
 
-            foreach (string planet in planetList) {
-                Console.WriteLine ($"from planet list {planet}");
-            }
+            // foreach (string planet in planetList) {
+            //     Console.WriteLine ($"from planet list {planet}");
+            // }
 
-            foreach (string planet in rockyPlanets) {
-                Console.WriteLine ($"Rocky {planet}");
-            }
+            // foreach (string planet in rockyPlanets) {
+            //     Console.WriteLine ($"Rocky {planet}");
+            // }
 
             Random random = new Random ();
             List<int> numbers = new List<int> {
@@ -31,15 +31,27 @@ namespace planet_and_spaceships {
                 random.Next (6),
             };
 
-            for (int i = 0; i < numbers.Count; i++) {
-                // Determine if the current loop index is contained inside of the `numbers` list. Print a message to the console indicating whether the index is in the list.
-                if (numbers.Contains (i)) {
-                    Console.WriteLine ($"numbers list contains {i}");
-                } else {
-                    Console.WriteLine ($"Nope numbers list don't have {i}");
-                }
+            // for (int i = 0; i < numbers.Count; i++) {
+            //     // Determine if the current loop index is contained inside of the `numbers` list. Print a message to the console indicating whether the index is in the list.
+            //     if (numbers.Contains (i)) {
+            //         Console.WriteLine ($"numbers list contains {i}");
+            //     } else {
+            //         Console.WriteLine ($"Nope numbers list don't have {i}");
+            //     }
+
+            //DICTIONARIES
+            Dictionary<string, string> wordsAndDefinitions = new Dictionary<string, string> ();
+            wordsAndDefinitions.Add ("Awesome", "The feeling of students when they are learning C#");
+            wordsAndDefinitions.Add ("SlickIce1", "When you're definitely it");
+            wordsAndDefinitions.Add ("Ice", "The moment at which one gets an ice");
+            //explain this []
+            Console.WriteLine (wordsAndDefinitions["Awesome"]);
+            Console.WriteLine (wordsAndDefinitions["Ice"]);
+            foreach (KeyValuePair<string, string> word in wordsAndDefinitions) {
+                Console.WriteLine ($"The definition of {word.Key} is : {word.Value}");
             }
 
         }
+
     }
 }
